@@ -4,7 +4,7 @@
   <title><![CDATA[TIIBUN Blog]]></title>
   <link href="http://tiibun.github.io/atom.xml" rel="self"/>
   <link href="http://tiibun.github.io/"/>
-  <updated>2013-06-29T19:53:14+09:00</updated>
+  <updated>2013-06-29T21:01:03+09:00</updated>
   <id>http://tiibun.github.io/</id>
   <author>
     <name><![CDATA[IIBUN Toshiyuki]]></name>
@@ -12,5 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[create github pages]]></title>
+    <link href="http://tiibun.github.io/blog/2013/06/29/create-github-pages/"/>
+    <updated>2013-06-29T20:11:00+09:00</updated>
+    <id>http://tiibun.github.io/blog/2013/06/29/create-github-pages</id>
+    <content type="html"><![CDATA[<p>いろいろ参考にしながらGithub Pagesを作ってみました。</p>
+
+<p>参考にしたページ</p>
+
+<p><a href="http://onigra.github.io/blog/2013/04/28/introduction-of-octopress/">【何番煎じ】OctopressとGitHub Pagesを使用したブログの構築手順</a></p>
+
+<p><a href="http://blog.glidenote.com/blog/2011/11/07/install-octopress-on-github/">GithubとOctopressでモダンな技術系ブログを作ってみる</a></p>
+
+<p>途中、引っかかったのでメモ。</p>
+
+<p>初めて <code>bundle exec rake deploy</code> を実行したとき、こんなエラーが出た。</p>
+
+<pre><code>$ bundle exec rake deploy
+## Deploying branch to Github Pages 
+## Pulling any updates from Github Pages 
+cd _deploy
+warning: no common commits
+remote: Counting objects: 17, done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 17 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (17/17), done.
+From github.com:tiibun/tiibun.github.io
+ * [new branch]      master     -&gt; origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull &lt;remote&gt; &lt;branch&gt;
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/&lt;branch&gt; master
+
+...
+</code></pre>
+
+<p>そういうわけで、メッセージの通り、</p>
+
+<pre><code>cd _deploy
+git branch -u origin/master master
+</code></pre>
+
+<p>を実行し、再度 deploy することで無事成功。</p>
+]]></content>
+  </entry>
   
 </feed>
