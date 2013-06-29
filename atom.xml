@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[TIIBUN Blog]]></title>
+  <link href="http://tiibun.github.io/atom.xml" rel="self"/>
+  <link href="http://tiibun.github.io/"/>
+  <updated>2013-06-29T19:53:14+09:00</updated>
+  <id>http://tiibun.github.io/</id>
+  <author>
+    <name><![CDATA[IIBUN Toshiyuki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
